@@ -29,3 +29,8 @@ const server = http.createServer((req, res) => {
     })
   );
 });
+
+server.listen(process.env.PORT || 0, () => {
+  const { port } = server.address();
+  console.log(`Order service listening on localhost on port:   ${port}`);
+});
