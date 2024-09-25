@@ -10,4 +10,9 @@ const init = async () => {
   console.log(`Server berjalan pada ${server.info.uri}`);
 };
 
+const { ORDER_SERVICE_PORT = 4000, USER_SERVICE_PORT = 5000 } = process.env;
+
+const orderService = `http://localhost:${ORDER_SERVICE_PORT}`;
+const userService = `http://localhost:${USER_SERVICE_PORT}`;
+
 init();
